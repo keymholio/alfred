@@ -16,7 +16,7 @@ Once there, you need to make it executable by running the following command:
 This script compiles a directory of .less files and outputs a directory of .css files. You can search text within the file (optional 'search_text' parameter to filter which less files to compile.
 
 ## Options
-  -h, --help	Print help (this message) and exit.
+  -h, --help	Print help
 
 ## Examples
 `alfred ~/theme/less ~/theme/css`
@@ -31,7 +31,8 @@ This takes all of the less files with the text '.theme()' in them and compiles t
 Less compiler needs to be installed. See http://lesscss.org for more information.
 
 ## Author
-Andrew Keym @optimus_keym
+Andrew Keym 
+@optimus_keym
 http://github.com/keymholio
 
 ## License
