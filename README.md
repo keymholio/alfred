@@ -21,7 +21,7 @@ This script compiles a directory of .less files and outputs a directory of .css 
 ## Examples
 `alfred ~/theme/less ~/theme/css`
 
-This the most basic version. It takes all of the less files and compiles them as css.
+This is the most basic version. It takes all of the less files and compiles them as css.
 
 `alfred ~/theme/less ~/theme/css '.theme()'`
 
