@@ -11,17 +11,19 @@ Once there, you need to make it executable by running the following command:
 `alfred [option] <source> <destination> [search_text]` 
 
 ## Description
-This script compiles a directory of .less files and outputs a directory of .css files. You can search text within the file to filter which less files to compile.
+This script compiles a directory of .less files and outputs a directory of .css files. You can search text within the file (optional 'search_text' parameter to filter which less files to compile.
 
 ## Options
   -h, --help	Print help (this message) and exit.
 
 ## Examples
 `alfred ~/theme/less ~/theme/css`
+
 This the most basic version. It takes all of the less files and compiles them as css.
 
 `alfred ~/theme/less ~/theme/css '.theme()'`
-This again takes all of the less files with the text '.theme()' in them and compiles them to css.
+
+This takes all of the less files with the text '.theme()' in them and compiles them to css.
 
 ## Prerequisites
 Less compiler needs to be installed. See http://lesscss.org for more information.

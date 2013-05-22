@@ -49,9 +49,9 @@ source_path=$1
 dest_path=$2
 search=$3
 if [[ -z "$3" ]]; then
-	files=$(find $1 -name '*.less')
+	files=$(find $1 -name '*.less' -type f)
 else
-	files=$(find $1 -name '*.less' | xargs grep -l $search)
+	files=$(find $1 -name '*.less' -type f | xargs grep -l $search)
 fi
 
 # check if destination directory already exists
