@@ -1,4 +1,5 @@
 # Alfred
+<img src="https://raw.github.com/keymholio/alfred/master/alfred.jpg"/>
 
 ## Installation
 Put the shell script in the location of your choice. You may want it readily available in /home/[your username]/bin or possibly in /usr/local/bin for all users.
@@ -7,7 +8,7 @@ Once there, you need to make it executable by running the following command:
 `chmod +x alfred`
 
 ## Usage
-alfred [option] <source> <destination> [search_text] 
+`alfred [option] <source> <destination> [search_text]` 
 
 ## Description
 This script compiles a directory of .less files and outputs a directory of .css files. You can search text within the file to filter which less files to compile.
