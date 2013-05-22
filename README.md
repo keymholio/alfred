@@ -4,6 +4,8 @@
 ## Installation
 Put the shell script in the location of your choice. You may want it readily available in /home/[your username]/bin or possibly in /usr/local/bin for all users.
 
+I also recommend removing the ".sh" extention so you won't have to use "alfred.sh" in all of the commands. All the code and examples below assume you don't have the ".sh" extension.
+
 Once there, you need to make it executable by running the following command:
 `chmod +x alfred`
 
