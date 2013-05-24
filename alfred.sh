@@ -39,7 +39,8 @@ There is NO WARRANTY, to the extent permitted by law.
   exit 0
 fi
 
-die() { echo "$@" 1>&2 ; rm $dest_path; exit 1; }
+die() { echo "$@" 1>&2 ; rm -rf $dest_path; exit 1; }
+
 
 # find all of the less files that contain '.theme()'
 # in the passed in directory
@@ -47,9 +48,12 @@ source_path=$1
 dest_path=$2
 search=$3
 
-mkdir -p $dest_path
 [[ -d "$source_path" ]] || die "A source directory is required"
-[[ -d "$dest_path" ]] || die "A destination directoy is required"
+if [[ -z "$2" ]]; then
+  die "A destination directory is required"
+else 
+  mkdir -p $dest_path
+fi
 
 if [[ -z "$3" ]]; then
 	files=$(find $1 -name '*.less' -type f)
@@ -74,5 +78,4 @@ do
 	dest="$dest_path$subdir$filename"
 	lessc --yui-compress $file $dest
 done
-
 echo "You've been served css!"
