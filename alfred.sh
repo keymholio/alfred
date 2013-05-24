@@ -41,19 +41,13 @@ fi
 
 die() { echo "$@" 1>&2 ; rm -rf $dest_path; exit 1; }
 
-
-# find all of the less files that contain '.theme()'
-# in the passed in directory
 source_path=$1
 dest_path=$2
 search=$3
 
 [[ -d "$source_path" ]] || die "A source directory is required"
-if [[ -z "$2" ]]; then
-  die "A destination directory is required"
-else 
-  mkdir -p $dest_path
-fi
+[[ -z "$dest_path" ]] && die "A destination directory is required" || mkdir -p $dest_path
+
 
 if [[ -z "$3" ]]; then
 	files=$(find $1 -name '*.less' -type f)
